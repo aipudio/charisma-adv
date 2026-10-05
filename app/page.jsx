@@ -1,95 +1,76 @@
 import Link from 'next/link';
-import { services, industries } from '../lib/data';
+import { siteConfig } from '../../lib/data';
 
-export default function HomePage() {
+export const metadata = {
+  title: 'من نحن | كاريزما للإعلان',
+  description: 'شغف الإبداع ودقة الإنتاج - نبذة عن كاريزما للإعلان، الرؤية والرسالة والقيم التنفيذية.',
+};
+
+export default function AboutPage() {
   return (
-    <div>
-      {/* 1. Hero Section */}
-      <section className="bg-slate-900 text-white py-24 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl font-black leading-tight">
-              من الفكرة إلى <span className="text-blue-500">التنفيذ</span>
-            </h1>
-            <p className="text-slate-300 text-lg md:text-xl leading-relaxed">
-              نقدم حلولاً متكاملة في الدعاية والإعلان والتصميم والطباعة والإنتاج والتنفيذ، لنحول احتياجات الشركات والعلامات التجارية إلى نتائج ملموسة.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Link href="/quote" className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition">
-                اطلب عرض سعر
-              </Link>
-              <Link href="/portfolio" className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold px-8 py-3 rounded-lg transition">
-                استعرض أعمالنا
-              </Link>
-            </div>
-          </div>
-          <div className="bg-slate-800 rounded-2xl h-80 flex items-center justify-center border border-slate-700 text-slate-400 font-semibold p-6 text-center">
-            [مساحة مخصصة: فيديو أو صور عالية الجودة لعمليات الإنتاج والطباعة الحقيقية]
-          </div>
-        </div>
-      </section>
+    <div className="py-16 max-w-5xl mx-auto px-4">
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span className="text-blue-600 font-bold text-sm tracking-widest uppercase">ABOUT CHARISMA</span>
+        <h1 className="text-3xl sm:text-5xl font-black text-slate-900 leading-tight">
+          شغف الإبداع... ودقة الإنتاج
+        </h1>
+        <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
+          في كاريزما للإعلان، لا نكتفي بتقديم تصاميم مبتكرة أو طباعة عالية الجودة فحسب، بل نبني تجربة بصريّة متكاملة تنبض بالحياة. نجمع بين الفكر الإبداعي للوكالات الإعلانية ودقة التصنيع والتنفيذ التي تتطلبها الأسواق الحديثة.
+        </p>
+      </div>
 
-      {/* 2. Short Intro */}
-      <section className="py-16 bg-white border-b border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">خبرة تنفيذية تمتد من التصميم إلى المنتج النهائي</h2>
-          <p className="text-slate-600 leading-relaxed">
-            في كاريزما، لا نتوقف عند الفكرة أو التصميم؛ نعمل على تحويلها إلى تنفيذ فعلي يناسب احتياج العلامة التجارية والشركة، بدءًا من التصميم والطباعة وصولاً إلى اللافتات والملصقات والمواد الدعائية.
+      {/* Main Narrative */}
+      <div className="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm mb-12 space-y-4">
+        <h2 className="text-2xl font-bold text-slate-900">انطلاقتنا والتزامنا</h2>
+        <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
+          منذ انطلاقتنا، أخذنا على عاتقنا تحويل أفكار شركائنا إلى واقع ملموس يُرى، يُلمس، ويترك أثراً مستداماً. ننطلق من دراسة هوية علامتك التجارية، لنصيغ لها حلولاً إعلانية وطباعية شاملة تعزز حضورك في السوق وتصنع لك الشخصية (الكاريزما) التي تستحقها.
+        </p>
+      </div>
+
+      {/* Vision & Mission Grid */}
+      <div className="grid md:grid-cols-2 gap-8 mb-12">
+        {/* Vision */}
+        <div className="bg-slate-900 text-white p-8 rounded-2xl border border-slate-800 space-y-3">
+          <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-black text-white text-sm mb-2">ر</div>
+          <h3 className="text-xl font-bold text-blue-400">رؤيتنا (Our Vision)</h3>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            أن نكون الخيار الأول والشركة الرائدة في تقديم الحلول الإعلانية والطباعية المتكاملة، عبر الدمج المستمر بين أحدث تكنولوجيا التصنيع والإبداع البصري غير المحدود.
           </p>
-          <Link href="/about" className="inline-block text-blue-600 font-bold hover:underline">تعرف على كاريزما &larr;</Link>
         </div>
-      </section>
 
-      {/* 3. Core Services */}
-      <section className="py-20 max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-black text-slate-900">مجموعات الخدمات الرئيسية</h2>
+        {/* Mission */}
+        <div className="bg-slate-900 text-white p-8 rounded-2xl border border-slate-800 space-y-3">
+          <div className="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center font-black text-white text-sm mb-2">س</div>
+          <h3 className="text-xl font-bold text-emerald-400">رسالتنا (Our Mission)</h3>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            تمكين العلامات التجارية من البروز والمنافسة بقوة، من خلال تقديم خدمات تصميم وإنتاج إعلاني تتفوق في دقتها وجودتها، مع التزام تام بالابتكار والمواعيد والتفاصيل التي تصنع الفارق.
+          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((item, idx) => (
-            <div key={item.slug} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
-              <div>
-                <span className="text-blue-600 font-black text-lg block mb-2">0{idx + 1}</span>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm mb-4 leading-relaxed">{item.desc}</p>
-              </div>
-              <Link href={`/services/${item.slug}`} className="text-blue-600 font-bold text-sm hover:underline mt-2">
-                تفاصيل الخدمة &larr;
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
+      </div>
 
-      {/* 4. Workflow */}
-      <section className="py-20 bg-slate-100 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-black text-slate-900 text-center mb-12">من الاحتياج إلى التنفيذ</h2>
-          <div className="grid sm:grid-cols-5 gap-4 text-center">
-            {['فهم الاحتياج', 'اقتراح الحل', 'التصميم والتجهيز', 'الإنتاج والتنفيذ', 'التسليم'].map((step, idx) => (
-              <div key={step} className="bg-white p-6 rounded-xl border border-slate-200">
-                <div className="w-10 h-10 mx-auto mb-3 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center">
-                  0{idx + 1}
-                </div>
-                <h3 className="font-bold text-slate-900 text-sm">{step}</h3>
-              </div>
-            ))}
-          </div>
+      {/* Core Equation Box */}
+      <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8 text-center space-y-3 mb-16">
+        <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block">معادلة كاريزما الجوهرية</span>
+        <div className="text-lg sm:text-xl font-black text-slate-900 flex flex-wrap items-center justify-center gap-2">
+          <span className="bg-white px-3 py-1.5 rounded-lg border border-blue-200">إبداع بصري مبتكر</span>
+          <span className="text-blue-600">+</span>
+          <span className="bg-white px-3 py-1.5 rounded-lg border border-blue-200">تقنيات إنتاج حديثة</span>
+          <span className="text-blue-600">=</span>
+          <span className="bg-blue-600 text-white px-3 py-1.5 rounded-lg">حضور استثنائي لعلامتك التجارية</span>
         </div>
-      </section>
+      </div>
 
-      {/* 5. Final CTA */}
-      <section className="py-20 bg-blue-600 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-black">لديك مشروع أو احتياج إعلاني؟ لنبدأ.</h2>
-          <p className="text-blue-100">أرسل لنا تفاصيل احتياجك، وسيتواصل معك فريق كاريزما لمناقشة الحل المناسب.</p>
-          <div className="flex justify-center gap-4 pt-2">
-            <Link href="/quote" className="bg-white text-blue-600 font-bold px-8 py-3 rounded-lg shadow-md hover:bg-slate-100 transition">
-              اطلب عرض سعر
-            </Link>
-          </div>
+      {/* CTA Box */}
+      <div className="bg-slate-900 text-white p-8 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 className="text-xl font-bold">جاهز لتحويل فكرتك إلى تنفيذ فعلي؟</h3>
+          <p className="text-slate-400 text-sm mt-1">تواصل مع فريق كاريزما لمناقشة مواصفات مشروعك وعرض السعر.</p>
         </div>
-      </section>
+        <Link href="/quote" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition whitespace-nowrap">
+          اطلب عرض سعر
+        </Link>
+      </div>
     </div>
   );
 }
