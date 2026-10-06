@@ -79,7 +79,7 @@ export default function ContactPage() {
             <div className="w-full h-48 rounded-2xl overflow-hidden border border-slate-200">
               <iframe
                 title="موقع كاريزما للإعلان"
-                src="https://maps.google.com/maps?q=29.9754668,30.9453025&hl=ar&z=17&output=embed"
+                src="https://maps.google.com/maps?q=كاريزما+للإعلان+شركة+دعاية+واعلان+6+اكتوبر&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
