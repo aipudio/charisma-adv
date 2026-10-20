@@ -13,7 +13,7 @@ const sampleProjects = [
     industry: 'المتاجر والمطاعم',
     desc: 'تصنيع وتركيب حروف بارزة مع إضاءة LED داخلية وتجليد كلادينج عالي المقاومة.',
     // ضع مسار الصورة هنا (من مجلد public/portfolio)
-    image: 'public/portfolio/project-1.webp',
+    image: '/portfolio/project-1.webp',
   },
   {
     id: 2,
